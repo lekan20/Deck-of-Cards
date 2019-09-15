@@ -16,14 +16,8 @@ class Card extends React.Component {
   }
 
   render() {
-    return <Image src={this.getCardImage()} />;
+    return 
   }
 }
-
-const Image = styled.img`
-  max-width: 100px;
-  max-height: 140px;
-  display: block;
-`;
 
 export default Card;

@@ -1,18 +1,11 @@
 import React from "react";
 
-const deck =
+const card =
 {
-    "success": true,
-    "cards": [
-        {
-            "image": "https://deckofcardsapi.com/static/img/KH.png",
-            "value": "KING",
-            "suit": "HEARTS",
-            "code": "KH"
-        }
-    ],
-    "deck_id":"3p40paa87x90",
-    "remaining": 51
+  "image": "https://deckofcardsapi.com/static/img/KH.png",
+  "value": "KING",
+  "suit": "HEARTS",
+  "code": "KH"
 }
 
 class Game extends React.Component {
@@ -20,40 +13,21 @@ class Game extends React.Component {
       super(props)
 
       this.state = {
-        deck: []
+        playingDeck: []
       }
   }
 
     componentDidMount(){
       this.setState({
-        deck: deck
+        playingDeck: card
       })
   }
-    getCards = () => {
-      let cards = [];
-      this.props.cards.forEach(card => {
-        cards.push(
-          <Card card={card} />
-        )
-      })
-      return (
-        cards
-      )
-    };
 
   render() {
-    return (
-        this.getCards()
-    )
-  }
-}
 
-class Card extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return  {props.card.image} ;
+    const playingDeck = this.state.playingDeck.map(card => console.loge(card) )
+
+    return
   }
 }
 
