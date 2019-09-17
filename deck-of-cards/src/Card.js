@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components";
+
 
 class Card extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Card extends React.Component {
   }
 
   render() {
-    return 
+    return `hi`;
   }
 }
 

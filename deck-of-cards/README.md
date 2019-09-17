@@ -66,3 +66,43 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+
+<Game >
+  <Hand>
+    <Card value={} suit={} />
+    <Card value={} suit={} />
+    <Card value={} suit={} />
+    <Card value={} suit={} />
+    <Card value={} suit={} />
+  </Hand>
+</Game>
+
+CARD {
+  state {
+    up: false
+  }
+
+  onClick {
+    this.setState {
+      up: true
+    }
+   }
+
+   render {
+     return <div class={this.state.isUp ? "up" : "down"} />
+   }
+
+   render {
+     return
+      {this.state.isUp && (
+        <UpCard>
+        )}
+
+        {!this.state.isUp && (
+          <DownCard>
+          )}
+   }
+}
