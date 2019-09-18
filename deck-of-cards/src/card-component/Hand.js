@@ -11,11 +11,9 @@ class Hand extends React.Component {
   render() {
     return (
       <div>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <Card deckId={this.props.deckId} />
+      <Card deckId={this.props.deckId} />
+      <Card deckId={this.props.deckId} />
       </div>
     )
   }

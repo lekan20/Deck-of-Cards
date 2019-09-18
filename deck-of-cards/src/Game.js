@@ -30,29 +30,29 @@ class Game extends React.Component {
     super(props);
 
     this.state = {
-      playingDeck: []
+      deck: null
     }
 
-    // Create an instance of the deck
-  this.myDeck = new CardApi();
+        // Create an instance of the deck
+      this.myDeck = new CardApi();
+    }
 
-  this.myDeck
-    .shuffleCards(6)
-    .then(resp => resp.json())
-    .then(resp => {
-      this.deck = resp;
-    });
-  }
 
   componentDidMount() {
-    this.setState({
-      playingDeck: hand
-    })
-  }
+    this.myDeck
+      .shuffleCards(6)
+      .then(resp => resp.json())
+      .then(resp => {
+        this.setState({
+          deck: resp
+        });
+      });
+    }
+
+
 
   render() {
-    console.log(this.myDeck)
-    return <Hand />
+    return this.state.deck ? <Hand deckId={this.state.deck.deck_id} /> : '';
   }
 }
 
