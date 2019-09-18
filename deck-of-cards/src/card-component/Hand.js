@@ -14,9 +14,11 @@ class Hand extends React.Component {
         <Card />
         <Card />
         <Card />
+        <Card />
+        <Card />
       </div>
     )
   }
 }
 
-export default Card;
+export default Hand;

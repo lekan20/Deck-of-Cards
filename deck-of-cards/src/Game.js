@@ -1,5 +1,6 @@
 import React from "react";
 import Hand from "./card-component/Hand";
+import CardApi from "./api/cardApi.js"
 
 const hand = [
   {
@@ -25,8 +26,22 @@ const hand = [
 
 
 class Game extends React.Component {
-  state = {
-    playingDeck: []
+  constructor(props){
+    super(props);
+
+    this.state = {
+      playingDeck: []
+    }
+
+    // Create an instance of the deck
+  this.myDeck = new CardApi();
+
+  this.myDeck
+    .shuffleCards(6)
+    .then(resp => resp.json())
+    .then(resp => {
+      this.deck = resp;
+    });
   }
 
   componentDidMount() {
@@ -36,7 +51,8 @@ class Game extends React.Component {
   }
 
   render() {
-    return <Hand deck={this.state.playingDeck} />
+    console.log(this.myDeck)
+    return <Hand />
   }
 }
 
