@@ -17,7 +17,6 @@ class Card extends React.Component {
     this.newCard.drawCards(this.props.deckId)
     .then((resp) => resp.json())
     .then((resp) => {
-      debugger
       this.setState({
         card: resp.cards[0]
       });

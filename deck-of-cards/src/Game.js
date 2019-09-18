@@ -40,7 +40,7 @@ class Game extends React.Component {
 
   componentDidMount() {
     this.myDeck
-      .shuffleCards(6)
+      .shuffleCards(1)
       .then(resp => resp.json())
       .then(resp => {
         this.setState({

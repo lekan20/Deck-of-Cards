@@ -9,12 +9,14 @@ class Hand extends React.Component {
   }
 
   render() {
+    const cards = []
+    for(let i =0; i < 5; i++) {
+      cards.push(<Card deckId={this.props.deckId} />)
+    }
     return (
       // Create for loop to print out five version of the cards
       <div>
-      <Card deckId={this.props.deckId} />
-      <Card deckId={this.props.deckId} />
-      <Card deckId={this.props.deckId} />
+        {cards}
       </div>
     )
   }
