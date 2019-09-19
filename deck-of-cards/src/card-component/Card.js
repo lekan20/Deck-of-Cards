@@ -2,6 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import CardApi from "../api/cardApi"
 
+const sample = {
+  CLUBS: "♣",
+  HEARTS: "♥",
+  SPADES: "♠",
+  DIAMONDS: "♦"
+}
 
 class Card extends React.Component {
   constructor(props) {
@@ -25,8 +31,13 @@ class Card extends React.Component {
 
 
   render() {
+
     return (
-      <div> {this.state.card.code} </div>
+        <div className="card">
+          {this.state.card.value}
+          {sample[this.state.card.suit]}
+        </div>
+
     );
   }
 }
