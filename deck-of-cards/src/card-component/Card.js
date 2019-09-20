@@ -51,7 +51,7 @@ class Card extends React.Component {
   render() {
 
     return (
-        <div className="card">
+        <div className={`card ${this.state.card.suit}`}>        
           <div className="card-topleft">
               {valueIcons[this.state.card.value]}
           </div>

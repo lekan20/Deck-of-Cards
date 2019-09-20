@@ -13,7 +13,7 @@ body {
   border-radius: 0.25em;
 }
 
-.card.red {
+.card.DIAMONDS, .card.HEARTS {
   color: red;
 }
 
@@ -37,6 +37,14 @@ body {
 }
 
 .card-suit {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
   margin: 0;
   position: absolute;
   top: 50%;

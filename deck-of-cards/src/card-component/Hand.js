@@ -15,7 +15,7 @@ class Hand extends React.Component {
     }
     return (
       // Create for loop to print out five version of the cards
-      <div className="cardList">
+      <div className="center">
         {cards}
       </div>
     )
