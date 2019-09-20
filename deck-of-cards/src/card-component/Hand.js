@@ -8,15 +8,23 @@ class Hand extends React.Component {
     super(props);
   }
 
+
+  getCards = () => {
+    let cards = [];
+    this.props.cards && this.props.cards.forEach((card, index) => {
+      cards.push(<Card card={card} />)
+    })
+
+    return cards;
+  }
+
   render() {
-    const cards = []
-    for(let i =0; i < 5; i++) {
-      cards.push(<Card deckId={this.props.deckId} />)
-    }
+
     return (
-      // Create for loop to print out five version of the cards
+
+
       <div className="center">
-        {cards}
+        {this.getCards()}
       </div>
     )
   }
