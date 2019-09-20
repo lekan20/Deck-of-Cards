@@ -2,11 +2,29 @@ import React from "react";
 import ReactDOM from "react-dom";
 import CardApi from "../api/cardApi"
 
-const sample = {
+const suitIcons = {
   CLUBS: "♣",
   HEARTS: "♥",
   SPADES: "♠",
   DIAMONDS: "♦"
+}
+
+const valueIcons = {
+  1: "1",
+  2: "2",
+  3: "3",
+  4: "4",
+  5: "5",
+  6: "6",
+  7: "7",
+  8: "8",
+  9: "9",
+  10: "10",
+  JACK: "J",
+  QUEEN: "Q",
+  KING: "K",
+  JOKER: "Joker",
+  ACE: "A"
 }
 
 class Card extends React.Component {
@@ -34,8 +52,15 @@ class Card extends React.Component {
 
     return (
         <div className="card">
-          {this.state.card.value}
-          {sample[this.state.card.suit]}
+          <div className="card-topleft">
+              {valueIcons[this.state.card.value]}
+          </div>
+            <div className="card-suit">
+              {suitIcons[this.state.card.suit]}
+            </div>
+          <div className="card-bottomright">
+            {valueIcons[this.state.card.value]}
+          </div>
         </div>
 
     );
