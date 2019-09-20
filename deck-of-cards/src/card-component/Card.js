@@ -1,6 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import CardApi from "../api/cardApi"
 
 const suitIcons = {
   CLUBS: "♣",

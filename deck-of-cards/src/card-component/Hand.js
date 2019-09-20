@@ -1,13 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Card from "./Card"
 
 
 class Hand extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
 
   getCards = () => {
     let cards = [];

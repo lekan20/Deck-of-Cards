@@ -17,6 +17,7 @@ class Game extends React.Component {
     }
 
 
+// call the cardApi from the lifecycle method
   componentDidMount() {
     this.myDeck
       .shuffleCards(1)
@@ -28,10 +29,11 @@ class Game extends React.Component {
       });
     }
 
+// Draw your cards from the deck, place them one at a time, til you reach five
     dealCards = () => {
       if (this.state.cards.length === 5){
         alert(
-          "Refresh the browser and draw again"
+          "You can only drive five cards, please grab a new deck if you want to draw some more."
         );
         return;
       }
@@ -47,6 +49,7 @@ class Game extends React.Component {
       })
     }
 
+// Clear the card state and replace it with a new one
     newDeck = () => {
       this.setState({
         cards: []
