@@ -29,7 +29,7 @@ class Game extends React.Component {
     }
 
     dealCards = () => {
-      if (this.state.cards.length == 5){
+      if (this.state.cards.length === 5){
         alert(
           "Refresh the browser and draw again"
         );
@@ -48,7 +48,17 @@ class Game extends React.Component {
     }
 
     newDeck = () => {
-      console.log("hello")
+      this.setState({
+        cards: []
+      })
+      this.myDeck
+        .shuffleCards(1)
+        .then(resp => resp.json())
+        .then(resp => {
+          this.setState({
+            deck: resp
+          });
+        });
     }
 
 
@@ -61,7 +71,7 @@ class Game extends React.Component {
       Draw A Card
     </button>
 
-    <button onClick={this.dealCards}>
+    <button onClick={this.newDeck}>
     Grab a New Deck
   </button>
 

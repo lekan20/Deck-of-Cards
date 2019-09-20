@@ -12,7 +12,7 @@ class Hand extends React.Component {
   getCards = () => {
     let cards = [];
     this.props.cards && this.props.cards.forEach((card, index) => {
-      cards.push(<Card card={card} />)
+      cards.push(<Card key={index} card={card} />)
     })
 
     return cards;
