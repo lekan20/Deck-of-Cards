@@ -29,6 +29,13 @@ class Game extends React.Component {
     }
 
     dealCards = () => {
+      if (this.state.cards.length == 5){
+        alert(
+          "Refresh the browser and draw again"
+        );
+        return;
+      }
+
       this.myDeck.drawCards(this.state.deck.deck_id)
       .then((resp) => resp.json())
       .then((resp) => {
@@ -40,15 +47,24 @@ class Game extends React.Component {
       })
     }
 
-
+    newDeck = () => {
+      console.log("hello")
+    }
 
 
   render() {
-    // return this.state.deck ? <Hand cards={this.state.cards} />: '';
+
+
+
     return (<div>
       <button onClick={this.dealCards}>
-      Draw Card
+      Draw A Card
     </button>
+
+    <button onClick={this.dealCards}>
+    Grab a New Deck
+  </button>
+
       <Hand cards={this.state.cards} />
     </div>)
   }
