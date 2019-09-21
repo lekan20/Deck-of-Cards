@@ -25,6 +25,7 @@ const valueIcons = {
   ACE: "A"
 }
 
+// All the values for an individual card that you'll see on the DOM
 class Card extends React.Component {
   constructor(props) {
     super(props);
