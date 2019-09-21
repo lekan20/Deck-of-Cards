@@ -69,7 +69,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Deck of cards Application
 
-This application lets you connect to the deck of cards api (https://deckofcardsapi.com/) to draw up to five cards from the deck and create a new deck to draw from.
+This application lets you connect to the deck of cards api (https://deckofcardsapi.com/) to draw up to five cards from the deck and create a new deck to draw from. Hitting the "Draw Card" button will connect the application to the API to present the cards from the object, and hitting "Grab a New Deck" also connects to the API to access its response.
 
 ### Run the Application
 
