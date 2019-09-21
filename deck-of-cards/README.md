@@ -66,3 +66,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Deck of cards Application
+
+This application lets you connect to the deck of cards api (https://deckofcardsapi.com/) to draw up to five cards from the deck and create a new deck to draw from.
+
+### Run the Application
+
+1. Run npm install
+2. Start application with npm start
+3. Click draw card button to draw one card at a time (and up to five cards)
+4. Hit the "Grab a New Deck" button to create a new deck to draw cards from
