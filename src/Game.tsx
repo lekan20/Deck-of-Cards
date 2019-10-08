@@ -7,8 +7,12 @@ interface GameState {
   cards: any;
 }
 
-class Game extends React.Component<null, GameState> {
-  constructor(props) {
+interface GameProps {}
+
+class Game extends React.Component<GameProps, GameState> {
+  private myDeck: CardApi;
+
+  constructor(props: GameProps) {
     super(props);
 
     this.state = {
