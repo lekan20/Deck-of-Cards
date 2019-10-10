@@ -1,10 +1,11 @@
 import React from "react";
 import Hand from "./card-component/Hand";
 import CardApi from "./api/cardApi.js";
+import {CardType} from "./App";
 
 interface GameState {
   deck: any;
-  cards: any;
+  cards: CardType[];
 }
 
 interface GameProps {}
