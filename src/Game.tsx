@@ -59,7 +59,7 @@ class Game extends React.Component<GameProps, GameState> {
   };
 
   // Clear the card state and replace it with a new one
-  newDeck = () => {
+  newDeck = (): void => {
     this.setState({
       cards: []
     });
