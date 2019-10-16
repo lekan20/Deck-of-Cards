@@ -25,7 +25,20 @@ class Game extends React.Component<GameProps, GameState> {
     this.myDeck = new CardApi();
   }
 
-  // call the cardApi from the lifecycle method
+  callDeck = () => {
+      this.myDeck
+          .drawCards(this.state.deck.deck_id)
+          .then(resp => resp.json())
+          .then(resp => {
+              let newCards = this.state.cards;
+              newCards.push(resp.cards[0]);
+              this.setState({
+                  cards: newCards
+              });
+          });
+  }
+
+    // call the cardApi from the lifecycle method
   componentDidMount() {
     this.myDeck
       .shuffleCards(1)
@@ -46,16 +59,7 @@ class Game extends React.Component<GameProps, GameState> {
       return;
     }
 
-    this.myDeck
-      .drawCards(this.state.deck.deck_id)
-      .then(resp => resp.json())
-      .then(resp => {
-        let newCards = this.state.cards;
-        newCards.push(resp.cards[0]);
-        this.setState({
-          cards: newCards
-        });
-      });
+    this.callDeck()
   };
 
   // Clear the card state and replace it with a new one

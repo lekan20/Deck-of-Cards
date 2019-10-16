@@ -4,8 +4,6 @@ import "./App.css";
 
 export interface CardType {
   code: string;
-  image: string;
-  images: any;
   suit: string;
   value: string;
 }
