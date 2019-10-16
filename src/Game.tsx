@@ -67,14 +67,7 @@ class Game extends React.Component<GameProps, GameState> {
     this.setState({
       cards: []
     });
-    this.myDeck
-      .shuffleCards(1)
-      .then(resp => resp.json())
-      .then(resp => {
-        this.setState({
-          deck: resp
-        });
-      });
+
   };
 
   render() {
