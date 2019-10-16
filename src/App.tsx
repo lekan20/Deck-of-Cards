@@ -7,10 +7,13 @@ export interface CardType {
   suit: string;
   value: string;
 }
-//
-// export interface Deck {
-//   // TODO
-// }
+
+export interface Deck {
+  deck_id: string;
+  remaining: number;
+  shuffled: boolean;
+  success: boolean;
+}
 
 const App = () => {
   return <Game />;

@@ -1,10 +1,10 @@
 import React from "react";
 import Hand from "./card-component/Hand";
 import CardApi from "./api/cardApi.js";
-import {CardType} from "./App";
+import {CardType, Deck} from "./App";
 
 interface GameState {
-  deck: any;
+  deck: Deck | null;
   cards: CardType[];
 }
 
@@ -26,6 +26,7 @@ class Game extends React.Component<GameProps, GameState> {
   }
 
   callDeck = () => {
+      this.state.deck &&
       this.myDeck
           .drawCards(this.state.deck.deck_id)
           .then(resp => resp.json())
